@@ -16,7 +16,7 @@ SecretClientOptions options = new SecretClientOptions()
             Mode = RetryMode.Exponential
          }
     };
-var client = new SecretClient(new Uri("https://pcra1KeyValut.vault.azure.net/"), new DefaultAzureCredential(),options);
+var client = new SecretClient(new Uri("https://pcra1KeyVault.vault.azure.net/"), new DefaultAzureCredential(),options);
 KeyVaultSecret secret = client.GetSecret("test");
 
 return secret.Value;
